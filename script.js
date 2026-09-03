@@ -1,33 +1,56 @@
 // Rook & Roll — shared behavior
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Each feature is initialized independently and wrapped in its own
+  // try/catch so that an error in one (e.g. nav toggle wiring) can never
+  // silently prevent another (e.g. the homepage dice roller) from running.
+  safeInit(initNavToggle);
+  safeInit(initYear);
+  safeInit(initDiceTile);
+});
+
+function safeInit(fn) {
+  try {
+    fn();
+  } catch (err) {
+    // Fail loudly in the console instead of silently breaking unrelated
+    // page behavior.
+    if (window.console && window.console.error) {
+      console.error('Rook & Roll init error:', err);
+    }
+  }
+}
+
+function initNavToggle() {
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.main-nav');
 
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var isOpen = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    // Close mobile nav after a link is chosen
-    nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        if (window.innerWidth <= 640) {
-          nav.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
+  if (!toggle || !nav) {
+    return;
   }
 
+  toggle.addEventListener('click', function () {
+    var isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close mobile nav after a link is chosen
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth <= 640) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+}
+
+function initYear() {
   var yearEl = document.querySelector('[data-year]');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
-
-  initDiceTile();
-});
+}
 
 // Interactive homepage dice tile — click or press the button to roll a
 // standard six-sided die. Built to be keyboard-operable and to announce
@@ -56,7 +79,11 @@ function initDiceTile() {
   var isRolling = false;
 
   function prefersReducedMotion() {
-    return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    try {
+      return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    } catch (e) {
+      return false;
+    }
   }
 
   function setDieValue(value) {
@@ -68,6 +95,11 @@ function initDiceTile() {
     faceEl.setAttribute('data-value', String(value));
     faceEl.setAttribute('aria-label', 'Die showing ' + value);
   }
+
+  // Make sure the die visually matches its initial data-value on load,
+  // instead of relying on markup to pre-mark the correct pips as visible.
+  var initialValue = Number(faceEl.getAttribute('data-value')) || 4;
+  setDieValue(initialValue);
 
   function rollDie() {
     if (isRolling) {
@@ -97,4 +129,12 @@ function initDiceTile() {
   }
 
   rollBtn.addEventListener('click', rollDie);
+
+  // Also support pressing Enter/Space when the die graphic itself is
+  // focused via keyboard for a slightly more forgiving interaction target.
+  rollBtn.addEventListener('keyup', function (event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      rollDie();
+    }
+  });
 }
