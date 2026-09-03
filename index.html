@@ -38,21 +38,26 @@
           <a class="btn secondary" href="games.html" style="margin-left:0.75rem;">Browse the Game Library</a>
         </div>
         <div class="hero-art">
-          <svg role="img" aria-label="Illustration of the Rook and Roll cafe: a table with a game board, dice, and cups of coffee" viewBox="0 0 200 160" width="260" height="210" xmlns="http://www.w3.org/2000/svg">
-            <title>Inside Rook &amp; Roll cafe</title>
-            <desc>A cozy table scene with a game board, playing pieces, dice, and a mug of coffee.</desc>
-            <rect x="10" y="90" width="180" height="12" rx="4" fill="#2b2136"/>
-            <rect x="30" y="40" width="90" height="55" rx="6" fill="#f5f0f5"/>
-            <rect x="38" y="48" width="32" height="32" fill="#4B2E83"/>
-            <rect x="80" y="48" width="32" height="32" fill="#FF7A30"/>
-            <circle cx="140" cy="70" r="9" fill="#FF7A30"/>
-            <rect x="150" y="55" width="18" height="22" rx="3" fill="#f5f0f5"/>
-            <rect x="155" y="60" width="3" height="3" fill="#4B2E83"/>
-            <rect x="161" y="60" width="3" height="3" fill="#4B2E83"/>
-            <rect x="155" y="66" width="3" height="3" fill="#4B2E83"/>
-            <rect x="161" y="66" width="3" height="3" fill="#4B2E83"/>
-            <path d="M20 40 q0 -20 20 -20 h0 q-10 5 -6 20 z" fill="#FF7A30" opacity="0.4"/>
-          </svg>
+          <div class="dice-tile">
+            <div class="die" id="heroDie">
+              <div class="die-face" id="dieFace" data-value="4" role="img" aria-label="Die showing 4">
+                <span class="pip" data-pos="1"></span>
+                <span class="pip" data-pos="2"></span>
+                <span class="pip" data-pos="3"></span>
+                <span class="pip" data-pos="4"></span>
+                <span class="pip" data-pos="5"></span>
+                <span class="pip" data-pos="6"></span>
+                <span class="pip" data-pos="7"></span>
+                <span class="pip" data-pos="8"></span>
+                <span class="pip" data-pos="9"></span>
+              </div>
+            </div>
+            <button type="button" class="btn roll-btn" id="rollDieBtn">🎲 Roll the Dice</button>
+            <p class="dice-status" id="diceStatus" role="status" aria-live="polite">Give it a roll!</p>
+            <noscript>
+              <p class="dice-status">Enable JavaScript to roll the dice — it's currently just showing a 4.</p>
+            </noscript>
+          </div>
         </div>
       </div>
     </section>
