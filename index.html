@@ -17,7 +17,7 @@
   <header class="site-header">
     <div class="nav-wrap">
       <a class="logo" href="index.html">Rook <span>&amp;</span> Roll</a>
-      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true">☰</span></button>
       <nav class="main-nav" id="main-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -41,18 +41,18 @@
           <div class="dice-tile">
             <div class="die" id="heroDie">
               <div class="die-face" id="dieFace" data-value="4" role="img" aria-label="Die showing 4">
-                <span class="pip" data-pos="1"></span>
-                <span class="pip" data-pos="2"></span>
-                <span class="pip" data-pos="3"></span>
-                <span class="pip" data-pos="4"></span>
-                <span class="pip" data-pos="5"></span>
-                <span class="pip" data-pos="6"></span>
-                <span class="pip" data-pos="7"></span>
-                <span class="pip" data-pos="8"></span>
-                <span class="pip" data-pos="9"></span>
+                <span class="pip" data-pos="1" aria-hidden="true"></span>
+                <span class="pip" data-pos="2" aria-hidden="true"></span>
+                <span class="pip" data-pos="3" aria-hidden="true"></span>
+                <span class="pip" data-pos="4" aria-hidden="true"></span>
+                <span class="pip" data-pos="5" aria-hidden="true"></span>
+                <span class="pip" data-pos="6" aria-hidden="true"></span>
+                <span class="pip" data-pos="7" aria-hidden="true"></span>
+                <span class="pip" data-pos="8" aria-hidden="true"></span>
+                <span class="pip" data-pos="9" aria-hidden="true"></span>
               </div>
             </div>
-            <button type="button" class="btn roll-btn" id="rollDieBtn">🎲 Roll the Dice</button>
+            <button type="button" class="btn roll-btn" id="rollDieBtn"><span aria-hidden="true">🎲</span> Roll the Dice</button>
             <p class="dice-status" id="diceStatus" role="status" aria-live="polite">Give it a roll!</p>
             <noscript>
               <p class="dice-status">Enable JavaScript to roll the dice — it's currently just showing a 4.</p>
@@ -66,7 +66,7 @@
       <div class="container">
         <div class="section-heading">
           <h2>Upcoming <span class="accent">Events</span></h2>
-          <a href="events.html">Full schedule &rarr;</a>
+          <a href="events.html">Full schedule <span aria-hidden="true">&rarr;</span></a>
         </div>
         <div class="event-grid">
           <div class="event-card">
@@ -92,7 +92,7 @@
       <div class="container">
         <div class="section-heading">
           <h2>What's on the <span class="accent">Shelf</span></h2>
-          <a href="games.html">Browse the library &rarr;</a>
+          <a href="games.html">Browse the library <span aria-hidden="true">&rarr;</span></a>
         </div>
         <p>From quick party games to deep strategy epics, our shelves are stocked with something for every table. Head over to the <a href="games.html">Game Library</a> to see it sorted by category.</p>
       </div>
