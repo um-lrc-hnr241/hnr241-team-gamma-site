@@ -50,266 +50,210 @@
 
         <p class="visually-hidden" id="reviewFilterCount" aria-live="polite">Showing 10 of 10 reviews</p>
 
-        <div class="reviews-grid">
-          <!-- 1. Cascadia -->
-          <article class="review-card" data-genre="strategy">
-            <div class="review-header">
-              <span class="tag">Strategy</span>
-              <h2>Cascadia</h2>
-              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Maya</strong> <span class="staff-role">(Shift Lead &amp; Habitat Expert)</span></p>
-            </div>
-            <dl class="game-meta">
-              <div>
-                <dt>Genre</dt>
-                <dd>Tile Placement / Nature Strategy</dd>
-              </div>
-              <div>
-                <dt>Age Range</dt>
-                <dd>10+</dd>
-              </div>
-              <div>
-                <dt>Price</dt>
-                <dd>$39.99</dd>
-              </div>
-            </dl>
-            <blockquote class="review-quote">
-              <p>"So relaxing yet surprisingly thinky. Drafting wildlife tokens and harmonizing habitats is pure zen with a warm mug of our house mocha."</p>
-            </blockquote>
-          </article>
+        <div class="reviews-table-wrap" tabindex="0" aria-label="Staff game reviews and recommendations table (scrollable horizontally if needed)">
+          <table class="reviews-table">
+            <caption>Staff favorites, game specs, and recommendations from the Rook &amp; Roll team.</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="th-game">Game &amp; Staff Pick</th>
+                <th scope="col" class="th-genre">Genre</th>
+                <th scope="col" class="th-age">Age</th>
+                <th scope="col" class="th-price">Price</th>
+                <th scope="col" class="th-review">Staff Review</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 1. Cascadia -->
+              <tr class="review-row" data-genre="strategy">
+                <th scope="row" class="game-cell">
+                  <img src="images/cascadia.webp" alt="Box art for Cascadia board game" class="game-thumb" width="84" height="84" loading="lazy">
+                  <div class="game-info">
+                    <span class="game-title">Cascadia</span>
+                    <span class="staff-byline"><span aria-hidden="true">👤</span> <strong>Maya</strong> <span class="staff-role">(Shift Lead)</span></span>
+                  </div>
+                </th>
+                <td class="genre-cell"><span class="tag">Strategy</span><span class="genre-subtext">Tile Placement</span></td>
+                <td class="meta-cell">10+</td>
+                <td class="price-cell">$39.99</td>
+                <td class="quote-cell">
+                  <blockquote class="review-quote">
+                    <p>"So relaxing yet surprisingly thinky. Drafting wildlife tokens and harmonizing habitats is pure zen with a warm mug of our house mocha."</p>
+                  </blockquote>
+                </td>
+              </tr>
 
-          <!-- 2. Codenames -->
-          <article class="review-card" data-genre="party">
-            <div class="review-header">
-              <span class="tag">Party</span>
-              <h2>Codenames</h2>
-              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Leo</strong> <span class="staff-role">(Game Host &amp; Clue Giver)</span></p>
-            </div>
-            <dl class="game-meta">
-              <div>
-                <dt>Genre</dt>
-                <dd>Word / Social Deduction Party</dd>
-              </div>
-              <div>
-                <dt>Age Range</dt>
-                <dd>14+</dd>
-              </div>
-              <div>
-                <dt>Price</dt>
-                <dd>$19.99</dd>
-              </div>
-            </dl>
-            <blockquote class="review-quote">
-              <p>"My go-to opener for casual game nights. You haven't truly bonded with someone until you've successfully linked 'Penguin' and 'Moon' with a one-word clue."</p>
-            </blockquote>
-          </article>
+              <!-- 2. Codenames -->
+              <tr class="review-row" data-genre="party">
+                <th scope="row" class="game-cell">
+                  <img src="images/codenames.webp" alt="Box art for Codenames party game" class="game-thumb" width="84" height="84" loading="lazy">
+                  <div class="game-info">
+                    <span class="game-title">Codenames</span>
+                    <span class="staff-byline"><span aria-hidden="true">👤</span> <strong>Leo</strong> <span class="staff-role">(Game Host)</span></span>
+                  </div>
+                </th>
+                <td class="genre-cell"><span class="tag">Party</span><span class="genre-subtext">Word &amp; Deduction</span></td>
+                <td class="meta-cell">14+</td>
+                <td class="price-cell">$19.99</td>
+                <td class="quote-cell">
+                  <blockquote class="review-quote">
+                    <p>"My go-to opener for casual game nights. You haven't truly bonded with someone until you've successfully linked 'Penguin' and 'Moon' with a one-word clue."</p>
+                  </blockquote>
+                </td>
+              </tr>
 
-          <!-- 3. Wingspan -->
-          <article class="review-card" data-genre="strategy">
-            <div class="review-header">
-              <span class="tag">Strategy</span>
-              <h2>Wingspan</h2>
-              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Sam</strong> <span class="staff-role">(Cafe Manager &amp; Bird Enthusiast)</span></p>
-            </div>
-            <dl class="game-meta">
-              <div>
-                <dt>Genre</dt>
-                <dd>Engine Building / Nature Strategy</dd>
-              </div>
-              <div>
-                <dt>Age Range</dt>
-                <dd>14+</dd>
-              </div>
-              <div>
-                <dt>Price</dt>
-                <dd>$59.99</dd>
-              </div>
-            </dl>
-            <blockquote class="review-quote">
-              <p>"Gorgeous art, pastel egg miniatures, and deeply satisfying engine building. Build a thriving bird sanctuary while sharing our soft pretzel bites."</p>
-            </blockquote>
-          </article>
+              <!-- 3. Wingspan -->
+              <tr class="review-row" data-genre="strategy">
+                <th scope="row" class="game-cell">
+                  <img src="images/wingspan.webp" alt="Box art for Wingspan board game" class="game-thumb" width="84" height="84" loading="lazy">
+                  <div class="game-info">
+                    <span class="game-title">Wingspan</span>
+                    <span class="staff-byline"><span aria-hidden="true">👤</span> <strong>Sam</strong> <span class="staff-role">(Cafe Manager)</span></span>
+                  </div>
+                </th>
+                <td class="genre-cell"><span class="tag">Strategy</span><span class="genre-subtext">Engine Building</span></td>
+                <td class="meta-cell">14+</td>
+                <td class="price-cell">$59.99</td>
+                <td class="quote-cell">
+                  <blockquote class="review-quote">
+                    <p>"Gorgeous art, pastel egg miniatures, and deeply satisfying engine building. Build a thriving bird sanctuary while sharing our soft pretzel bites."</p>
+                  </blockquote>
+                </td>
+              </tr>
 
-          <!-- 4. Sushi Go Party! -->
-          <article class="review-card" data-genre="family party">
-            <div class="review-header">
-              <span class="tag">Family</span>
-              <h2>Sushi Go Party!</h2>
-              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Chloe</strong> <span class="staff-role">(Barista)</span></p>
-            </div>
-            <dl class="game-meta">
-              <div>
-                <dt>Genre</dt>
-                <dd>Card Drafting / Fast-Paced Family</dd>
-              </div>
-              <div>
-                <dt>Age Range</dt>
-                <dd>8+</dd>
-              </div>
-              <div>
-                <dt>Price</dt>
-                <dd>$24.99</dd>
-              </div>
-            </dl>
-            <blockquote class="review-quote">
-              <p>"Adorable art and lightning-fast rounds! Anyone can learn it in under two minutes, but the race for pudding and wasabi-nigiri gets delightfully competitive."</p>
-            </blockquote>
-          </article>
+              <!-- 4. Sushi Go Party! -->
+              <tr class="review-row" data-genre="family party">
+                <th scope="row" class="game-cell">
+                  <img src="images/sushi-go-party.webp" alt="Box art for Sushi Go Party! card game" class="game-thumb" width="84" height="84" loading="lazy">
+                  <div class="game-info">
+                    <span class="game-title">Sushi Go Party!</span>
+                    <span class="staff-byline"><span aria-hidden="true">👤</span> <strong>Chloe</strong> <span class="staff-role">(Barista)</span></span>
+                  </div>
+                </th>
+                <td class="genre-cell"><span class="tag">Family</span><span class="genre-subtext">Card Drafting</span></td>
+                <td class="meta-cell">8+</td>
+                <td class="price-cell">$24.99</td>
+                <td class="quote-cell">
+                  <blockquote class="review-quote">
+                    <p>"Adorable art and lightning-fast rounds! Anyone can learn it in under two minutes, but the race for pudding and wasabi-nigiri gets delightfully competitive."</p>
+                  </blockquote>
+                </td>
+              </tr>
 
-          <!-- 5. Pandemic -->
-          <article class="review-card" data-genre="cooperative">
-            <div class="review-header">
-              <span class="tag">Cooperative</span>
-              <h2>Pandemic</h2>
-              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Marcus</strong> <span class="staff-role">(Tournament Organizer)</span></p>
-            </div>
-            <dl class="game-meta">
-              <div>
-                <dt>Genre</dt>
-                <dd>Cooperative Strategy / Pandemic Control</dd>
-              </div>
-              <div>
-                <dt>Age Range</dt>
-                <dd>8+</dd>
-              </div>
-              <div>
-                <dt>Price</dt>
-                <dd>$39.99</dd>
-              </div>
-            </dl>
-            <blockquote class="review-quote">
-              <p>"The gold standard of cooperative board gaming. Pulling off a cure on the very last turn when the infection deck is nearly depleted is an unforgettable table moment."</p>
-            </blockquote>
-          </article>
+              <!-- 5. Pandemic -->
+              <tr class="review-row" data-genre="cooperative">
+                <th scope="row" class="game-cell">
+                  <img src="images/pandemic.webp" alt="Box art for Pandemic cooperative game" class="game-thumb" width="84" height="84" loading="lazy">
+                  <div class="game-info">
+                    <span class="game-title">Pandemic</span>
+                    <span class="staff-byline"><span aria-hidden="true">👤</span> <strong>Marcus</strong> <span class="staff-role">(Tournament Lead)</span></span>
+                  </div>
+                </th>
+                <td class="genre-cell"><span class="tag">Cooperative</span><span class="genre-subtext">Team Strategy</span></td>
+                <td class="meta-cell">8+</td>
+                <td class="price-cell">$39.99</td>
+                <td class="quote-cell">
+                  <blockquote class="review-quote">
+                    <p>"The gold standard of cooperative board gaming. Pulling off a cure on the very last turn when the infection deck is nearly depleted is an unforgettable table moment."</p>
+                  </blockquote>
+                </td>
+              </tr>
 
-          <!-- 6. Ticket to Ride: Europe -->
-          <article class="review-card" data-genre="strategy family">
-            <div class="review-header">
-              <span class="tag">Family</span>
-              <h2>Ticket to Ride: Europe</h2>
-              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Priya</strong> <span class="staff-role">(Front of House)</span></p>
-            </div>
-            <dl class="game-meta">
-              <div>
-                <dt>Genre</dt>
-                <dd>Route Building / Family Strategy</dd>
-              </div>
-              <div>
-                <dt>Age Range</dt>
-                <dd>8+</dd>
-              </div>
-              <div>
-                <dt>Price</dt>
-                <dd>$54.99</dd>
-              </div>
-            </dl>
-            <blockquote class="review-quote">
-              <p>"Connecting train routes through alpine tunnels never gets old. Perfect gateway game for folks ready to move past Monopoly into modern board gaming."</p>
-            </blockquote>
-          </article>
+              <!-- 6. Ticket to Ride: Europe -->
+              <tr class="review-row" data-genre="strategy family">
+                <th scope="row" class="game-cell">
+                  <img src="images/ticket-to-ride-europe.webp" alt="Box art for Ticket to Ride: Europe board game" class="game-thumb" width="84" height="84" loading="lazy">
+                  <div class="game-info">
+                    <span class="game-title">Ticket to Ride: Europe</span>
+                    <span class="staff-byline"><span aria-hidden="true">👤</span> <strong>Priya</strong> <span class="staff-role">(Front of House)</span></span>
+                  </div>
+                </th>
+                <td class="genre-cell"><span class="tag">Family</span><span class="genre-subtext">Route Building</span></td>
+                <td class="meta-cell">8+</td>
+                <td class="price-cell">$54.99</td>
+                <td class="quote-cell">
+                  <blockquote class="review-quote">
+                    <p>"Connecting train routes through alpine tunnels never gets old. Perfect gateway game for folks ready to move past Monopoly into modern board gaming."</p>
+                  </blockquote>
+                </td>
+              </tr>
 
-          <!-- 7. Azul -->
-          <article class="review-card" data-genre="strategy family">
-            <div class="review-header">
-              <span class="tag">Strategy</span>
-              <h2>Azul</h2>
-              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Alex</strong> <span class="staff-role">(Floor Staff &amp; Rules Guru)</span></p>
-            </div>
-            <dl class="game-meta">
-              <div>
-                <dt>Genre</dt>
-                <dd>Abstract Tile-Drafting / Pattern Building</dd>
-              </div>
-              <div>
-                <dt>Age Range</dt>
-                <dd>8+</dd>
-              </div>
-              <div>
-                <dt>Price</dt>
-                <dd>$39.99</dd>
-              </div>
-            </dl>
-            <blockquote class="review-quote">
-              <p>"Tactile ceramic-like resin tiles that feel amazing in your hands. Easy rules to teach, but can become delightfully cutthroat when drafting against seasoned opponents."</p>
-            </blockquote>
-          </article>
+              <!-- 7. Azul -->
+              <tr class="review-row" data-genre="strategy family">
+                <th scope="row" class="game-cell">
+                  <img src="images/azul.webp" alt="Box art for Azul tile placement game" class="game-thumb" width="84" height="84" loading="lazy">
+                  <div class="game-info">
+                    <span class="game-title">Azul</span>
+                    <span class="staff-byline"><span aria-hidden="true">👤</span> <strong>Alex</strong> <span class="staff-role">(Rules Guru)</span></span>
+                  </div>
+                </th>
+                <td class="genre-cell"><span class="tag">Strategy</span><span class="genre-subtext">Tile Drafting</span></td>
+                <td class="meta-cell">8+</td>
+                <td class="price-cell">$39.99</td>
+                <td class="quote-cell">
+                  <blockquote class="review-quote">
+                    <p>"Tactile ceramic-like resin tiles that feel amazing in your hands. Easy rules to teach, but can become delightfully cutthroat when drafting against seasoned opponents."</p>
+                  </blockquote>
+                </td>
+              </tr>
 
-          <!-- 8. The Crew: Mission Deep Sea -->
-          <article class="review-card" data-genre="cooperative">
-            <div class="review-header">
-              <span class="tag">Cooperative</span>
-              <h2>The Crew: Mission Deep Sea</h2>
-              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Devon</strong> <span class="staff-role">(Barista &amp; Puzzle Fan)</span></p>
-            </div>
-            <dl class="game-meta">
-              <div>
-                <dt>Genre</dt>
-                <dd>Cooperative Trick-Taking / Card Game</dd>
-              </div>
-              <div>
-                <dt>Age Range</dt>
-                <dd>10+</dd>
-              </div>
-              <div>
-                <dt>Price</dt>
-                <dd>$14.99</dd>
-              </div>
-            </dl>
-            <blockquote class="review-quote">
-              <p>"Pocket-sized box with infinite depth. Silent teamwork underwater where every card you play matters — our staff plays this on our breaks constantly!"</p>
-            </blockquote>
-          </article>
+              <!-- 8. The Crew: Mission Deep Sea -->
+              <tr class="review-row" data-genre="cooperative">
+                <th scope="row" class="game-cell">
+                  <img src="images/the-crew-mission-deep-sea.webp" alt="Box art for The Crew: Mission Deep Sea game" class="game-thumb" width="84" height="84" loading="lazy">
+                  <div class="game-info">
+                    <span class="game-title">The Crew: Mission Deep Sea</span>
+                    <span class="staff-byline"><span aria-hidden="true">👤</span> <strong>Devon</strong> <span class="staff-role">(Barista)</span></span>
+                  </div>
+                </th>
+                <td class="genre-cell"><span class="tag">Cooperative</span><span class="genre-subtext">Trick-Taking</span></td>
+                <td class="meta-cell">10+</td>
+                <td class="price-cell">$14.99</td>
+                <td class="quote-cell">
+                  <blockquote class="review-quote">
+                    <p>"Pocket-sized box with infinite depth. Silent teamwork underwater where every card you play matters — our staff plays this on our breaks constantly!"</p>
+                  </blockquote>
+                </td>
+              </tr>
 
-          <!-- 9. Catan -->
-          <article class="review-card" data-genre="strategy">
-            <div class="review-header">
-              <span class="tag">Strategy</span>
-              <h2>Catan</h2>
-              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Jordan</strong> <span class="staff-role">(Weekend Host)</span></p>
-            </div>
-            <dl class="game-meta">
-              <div>
-                <dt>Genre</dt>
-                <dd>Trading / Resource Management</dd>
-              </div>
-              <div>
-                <dt>Age Range</dt>
-                <dd>10+</dd>
-              </div>
-              <div>
-                <dt>Price</dt>
-                <dd>$48.99</dd>
-              </div>
-            </dl>
-            <blockquote class="review-quote">
-              <p>"A modern classic for good reason. Fierce sheep-for-wheat negotiations and table banter are best enjoyed over a pot of hot loose-leaf tea."</p>
-            </blockquote>
-          </article>
+              <!-- 9. Catan -->
+              <tr class="review-row" data-genre="strategy">
+                <th scope="row" class="game-cell">
+                  <img src="images/catan.webp" alt="Box art for Catan board game" class="game-thumb" width="84" height="84" loading="lazy">
+                  <div class="game-info">
+                    <span class="game-title">Catan</span>
+                    <span class="staff-byline"><span aria-hidden="true">👤</span> <strong>Jordan</strong> <span class="staff-role">(Weekend Host)</span></span>
+                  </div>
+                </th>
+                <td class="genre-cell"><span class="tag">Strategy</span><span class="genre-subtext">Resource Trading</span></td>
+                <td class="meta-cell">10+</td>
+                <td class="price-cell">$48.99</td>
+                <td class="quote-cell">
+                  <blockquote class="review-quote">
+                    <p>"A modern classic for good reason. Fierce sheep-for-wheat negotiations and table banter are best enjoyed over a pot of hot loose-leaf tea."</p>
+                  </blockquote>
+                </td>
+              </tr>
 
-          <!-- 10. Betrayal at House on the Hill -->
-          <article class="review-card" data-genre="party cooperative">
-            <div class="review-header">
-              <span class="tag">Cooperative</span>
-              <h2>Betrayal at House on the Hill</h2>
-              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Riley</strong> <span class="staff-role">(Events Assistant)</span></p>
-            </div>
-            <dl class="game-meta">
-              <div>
-                <dt>Genre</dt>
-                <dd>Narrative Exploration / Hidden Traitor</dd>
-              </div>
-              <div>
-                <dt>Age Range</dt>
-                <dd>12+</dd>
-              </div>
-              <div>
-                <dt>Price</dt>
-                <dd>$49.99</dd>
-              </div>
-            </dl>
-            <blockquote class="review-quote">
-              <p>"Half haunted mansion exploration, half B-horror movie showdown. With 50 unique haunts, every session turns into an epic storytelling adventure."</p>
-            </blockquote>
-          </article>
+              <!-- 10. Betrayal at House on the Hill -->
+              <tr class="review-row" data-genre="party cooperative">
+                <th scope="row" class="game-cell">
+                  <img src="images/betrayal-at-house-on-the-hill.webp" alt="Box art for Betrayal at House on the Hill game" class="game-thumb" width="84" height="84" loading="lazy">
+                  <div class="game-info">
+                    <span class="game-title">Betrayal at House on the Hill</span>
+                    <span class="staff-byline"><span aria-hidden="true">👤</span> <strong>Riley</strong> <span class="staff-role">(Events Assistant)</span></span>
+                  </div>
+                </th>
+                <td class="genre-cell"><span class="tag">Cooperative</span><span class="genre-subtext">Narrative &amp; Traitor</span></td>
+                <td class="meta-cell">12+</td>
+                <td class="price-cell">$49.99</td>
+                <td class="quote-cell">
+                  <blockquote class="review-quote">
+                    <p>"Half haunted mansion exploration, half B-horror movie showdown. With 50 unique haunts, every session turns into an epic storytelling adventure."</p>
+                  </blockquote>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
