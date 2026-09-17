@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Reviews &amp; Recommendations — Rook &amp; Roll</title>
+  <meta name="description" content="Staff picks and honest reviews of the best board games at Rook & Roll cafe, including genre, age range, and pricing.">
+  <meta name="theme-color" content="#4B2E83">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html">Rook <span>&amp;</span> Roll</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true">☰</span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Game Library</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="reviews.html" aria-current="page">Staff Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" style="padding-bottom: 1.5rem;">
+      <div class="container">
+        <h1>Staff Reviews &amp; <span class="accent">Recommendations</span></h1>
+        <p class="lede">Our crew plays hundreds of games so you can find the perfect one for your table. Here are 10 of our all-time favorites currently on our shelves.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="filter-bar" role="toolbar" aria-label="Filter reviews by genre">
+          <span class="filter-label">Filter by Genre:</span>
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All (10)</button>
+          <button type="button" class="filter-btn" data-filter="strategy" aria-pressed="false">Strategy</button>
+          <button type="button" class="filter-btn" data-filter="party" aria-pressed="false">Party</button>
+          <button type="button" class="filter-btn" data-filter="cooperative" aria-pressed="false">Cooperative</button>
+          <button type="button" class="filter-btn" data-filter="family" aria-pressed="false">Family</button>
+        </div>
+
+        <p class="visually-hidden" id="reviewFilterCount" aria-live="polite">Showing 10 of 10 reviews</p>
+
+        <div class="reviews-grid">
+          <!-- 1. Cascadia -->
+          <article class="review-card" data-genre="strategy">
+            <div class="review-header">
+              <span class="tag">Strategy</span>
+              <h2>Cascadia</h2>
+              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Maya</strong> <span class="staff-role">(Shift Lead &amp; Habitat Expert)</span></p>
+            </div>
+            <dl class="game-meta">
+              <div>
+                <dt>Genre</dt>
+                <dd>Tile Placement / Nature Strategy</dd>
+              </div>
+              <div>
+                <dt>Age Range</dt>
+                <dd>10+</dd>
+              </div>
+              <div>
+                <dt>Price</dt>
+                <dd>$39.99</dd>
+              </div>
+            </dl>
+            <blockquote class="review-quote">
+              <p>"So relaxing yet surprisingly thinky. Drafting wildlife tokens and harmonizing habitats is pure zen with a warm mug of our house mocha."</p>
+            </blockquote>
+          </article>
+
+          <!-- 2. Codenames -->
+          <article class="review-card" data-genre="party">
+            <div class="review-header">
+              <span class="tag">Party</span>
+              <h2>Codenames</h2>
+              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Leo</strong> <span class="staff-role">(Game Host &amp; Clue Giver)</span></p>
+            </div>
+            <dl class="game-meta">
+              <div>
+                <dt>Genre</dt>
+                <dd>Word / Social Deduction Party</dd>
+              </div>
+              <div>
+                <dt>Age Range</dt>
+                <dd>14+</dd>
+              </div>
+              <div>
+                <dt>Price</dt>
+                <dd>$19.99</dd>
+              </div>
+            </dl>
+            <blockquote class="review-quote">
+              <p>"My go-to opener for casual game nights. You haven't truly bonded with someone until you've successfully linked 'Penguin' and 'Moon' with a one-word clue."</p>
+            </blockquote>
+          </article>
+
+          <!-- 3. Wingspan -->
+          <article class="review-card" data-genre="strategy">
+            <div class="review-header">
+              <span class="tag">Strategy</span>
+              <h2>Wingspan</h2>
+              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Sam</strong> <span class="staff-role">(Cafe Manager &amp; Bird Enthusiast)</span></p>
+            </div>
+            <dl class="game-meta">
+              <div>
+                <dt>Genre</dt>
+                <dd>Engine Building / Nature Strategy</dd>
+              </div>
+              <div>
+                <dt>Age Range</dt>
+                <dd>14+</dd>
+              </div>
+              <div>
+                <dt>Price</dt>
+                <dd>$59.99</dd>
+              </div>
+            </dl>
+            <blockquote class="review-quote">
+              <p>"Gorgeous art, pastel egg miniatures, and deeply satisfying engine building. Build a thriving bird sanctuary while sharing our soft pretzel bites."</p>
+            </blockquote>
+          </article>
+
+          <!-- 4. Sushi Go Party! -->
+          <article class="review-card" data-genre="family party">
+            <div class="review-header">
+              <span class="tag">Family</span>
+              <h2>Sushi Go Party!</h2>
+              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Chloe</strong> <span class="staff-role">(Barista)</span></p>
+            </div>
+            <dl class="game-meta">
+              <div>
+                <dt>Genre</dt>
+                <dd>Card Drafting / Fast-Paced Family</dd>
+              </div>
+              <div>
+                <dt>Age Range</dt>
+                <dd>8+</dd>
+              </div>
+              <div>
+                <dt>Price</dt>
+                <dd>$24.99</dd>
+              </div>
+            </dl>
+            <blockquote class="review-quote">
+              <p>"Adorable art and lightning-fast rounds! Anyone can learn it in under two minutes, but the race for pudding and wasabi-nigiri gets delightfully competitive."</p>
+            </blockquote>
+          </article>
+
+          <!-- 5. Pandemic -->
+          <article class="review-card" data-genre="cooperative">
+            <div class="review-header">
+              <span class="tag">Cooperative</span>
+              <h2>Pandemic</h2>
+              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Marcus</strong> <span class="staff-role">(Tournament Organizer)</span></p>
+            </div>
+            <dl class="game-meta">
+              <div>
+                <dt>Genre</dt>
+                <dd>Cooperative Strategy / Pandemic Control</dd>
+              </div>
+              <div>
+                <dt>Age Range</dt>
+                <dd>8+</dd>
+              </div>
+              <div>
+                <dt>Price</dt>
+                <dd>$39.99</dd>
+              </div>
+            </dl>
+            <blockquote class="review-quote">
+              <p>"The gold standard of cooperative board gaming. Pulling off a cure on the very last turn when the infection deck is nearly depleted is an unforgettable table moment."</p>
+            </blockquote>
+          </article>
+
+          <!-- 6. Ticket to Ride: Europe -->
+          <article class="review-card" data-genre="strategy family">
+            <div class="review-header">
+              <span class="tag">Family</span>
+              <h2>Ticket to Ride: Europe</h2>
+              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Priya</strong> <span class="staff-role">(Front of House)</span></p>
+            </div>
+            <dl class="game-meta">
+              <div>
+                <dt>Genre</dt>
+                <dd>Route Building / Family Strategy</dd>
+              </div>
+              <div>
+                <dt>Age Range</dt>
+                <dd>8+</dd>
+              </div>
+              <div>
+                <dt>Price</dt>
+                <dd>$54.99</dd>
+              </div>
+            </dl>
+            <blockquote class="review-quote">
+              <p>"Connecting train routes through alpine tunnels never gets old. Perfect gateway game for folks ready to move past Monopoly into modern board gaming."</p>
+            </blockquote>
+          </article>
+
+          <!-- 7. Azul -->
+          <article class="review-card" data-genre="strategy family">
+            <div class="review-header">
+              <span class="tag">Strategy</span>
+              <h2>Azul</h2>
+              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Alex</strong> <span class="staff-role">(Floor Staff &amp; Rules Guru)</span></p>
+            </div>
+            <dl class="game-meta">
+              <div>
+                <dt>Genre</dt>
+                <dd>Abstract Tile-Drafting / Pattern Building</dd>
+              </div>
+              <div>
+                <dt>Age Range</dt>
+                <dd>8+</dd>
+              </div>
+              <div>
+                <dt>Price</dt>
+                <dd>$39.99</dd>
+              </div>
+            </dl>
+            <blockquote class="review-quote">
+              <p>"Tactile ceramic-like resin tiles that feel amazing in your hands. Easy rules to teach, but can become delightfully cutthroat when drafting against seasoned opponents."</p>
+            </blockquote>
+          </article>
+
+          <!-- 8. The Crew: Mission Deep Sea -->
+          <article class="review-card" data-genre="cooperative">
+            <div class="review-header">
+              <span class="tag">Cooperative</span>
+              <h2>The Crew: Mission Deep Sea</h2>
+              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Devon</strong> <span class="staff-role">(Barista &amp; Puzzle Fan)</span></p>
+            </div>
+            <dl class="game-meta">
+              <div>
+                <dt>Genre</dt>
+                <dd>Cooperative Trick-Taking / Card Game</dd>
+              </div>
+              <div>
+                <dt>Age Range</dt>
+                <dd>10+</dd>
+              </div>
+              <div>
+                <dt>Price</dt>
+                <dd>$14.99</dd>
+              </div>
+            </dl>
+            <blockquote class="review-quote">
+              <p>"Pocket-sized box with infinite depth. Silent teamwork underwater where every card you play matters — our staff plays this on our breaks constantly!"</p>
+            </blockquote>
+          </article>
+
+          <!-- 9. Catan -->
+          <article class="review-card" data-genre="strategy">
+            <div class="review-header">
+              <span class="tag">Strategy</span>
+              <h2>Catan</h2>
+              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Jordan</strong> <span class="staff-role">(Weekend Host)</span></p>
+            </div>
+            <dl class="game-meta">
+              <div>
+                <dt>Genre</dt>
+                <dd>Trading / Resource Management</dd>
+              </div>
+              <div>
+                <dt>Age Range</dt>
+                <dd>10+</dd>
+              </div>
+              <div>
+                <dt>Price</dt>
+                <dd>$48.99</dd>
+              </div>
+            </dl>
+            <blockquote class="review-quote">
+              <p>"A modern classic for good reason. Fierce sheep-for-wheat negotiations and table banter are best enjoyed over a pot of hot loose-leaf tea."</p>
+            </blockquote>
+          </article>
+
+          <!-- 10. Betrayal at House on the Hill -->
+          <article class="review-card" data-genre="party cooperative">
+            <div class="review-header">
+              <span class="tag">Cooperative</span>
+              <h2>Betrayal at House on the Hill</h2>
+              <p class="staff-byline"><span aria-hidden="true">👤</span> Recommended by <strong>Riley</strong> <span class="staff-role">(Events Assistant)</span></p>
+            </div>
+            <dl class="game-meta">
+              <div>
+                <dt>Genre</dt>
+                <dd>Narrative Exploration / Hidden Traitor</dd>
+              </div>
+              <div>
+                <dt>Age Range</dt>
+                <dd>12+</dd>
+              </div>
+              <div>
+                <dt>Price</dt>
+                <dd>$49.99</dd>
+              </div>
+            </dl>
+            <blockquote class="review-quote">
+              <p>"Half haunted mansion exploration, half B-horror movie showdown. With 50 unique haunts, every session turns into an epic storytelling adventure."</p>
+            </blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="callout">
+          <h2>Want more personalized recommendations?</h2>
+          <p>Drop by our counter anytime! Tell us your party size, how much time you have, and your favorite movie or game, and we'll pull three custom picks for your table. Or join us at <a href="events.html">Casual Game Night</a> on Tuesdays to play along with staff.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Rook &amp; Roll</strong> — Board games, good food, better company.</p>
+      <p>&copy; <span data-year>2026</span> Rook &amp; Roll Board Game Cafe. Made with dice and dedication.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
