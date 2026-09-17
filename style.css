@@ -582,7 +582,7 @@ section.alt {
   margin: 0;
 }
 
-/* Table (events page schedule) */
+/* Tables (events schedule & reviews table) */
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
@@ -591,7 +591,8 @@ section.alt {
   overflow: hidden;
 }
 
-.schedule-table caption {
+.schedule-table caption,
+.reviews-table caption {
   text-align: left;
   color: var(--text-muted);
   padding-bottom: 0.75rem;
@@ -613,6 +614,157 @@ section.alt {
 
 .schedule-table tbody tr:last-child td {
   border-bottom: none;
+}
+
+/* Reviews Table Styles */
+.reviews-table-wrap {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  overflow-x: auto;
+}
+
+.reviews-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+}
+
+.reviews-table thead th {
+  background: var(--purple);
+  color: #fff;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.reviews-table thead th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.reviews-table thead th:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.reviews-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.reviews-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.reviews-table th,
+.reviews-table td {
+  padding: 1.1rem 0.9rem;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.reviews-table tbody tr:last-child th,
+.reviews-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.game-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: normal;
+  min-width: 250px;
+}
+
+.game-thumb {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: var(--bg-alt);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.game-title {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.game-info .staff-byline {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.genre-cell {
+  min-width: 140px;
+}
+
+.genre-cell .tag {
+  margin-bottom: 0.25rem;
+}
+
+.genre-subtext {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.meta-cell {
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.price-cell {
+  font-weight: 800;
+  color: var(--orange);
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+.quote-cell {
+  min-width: 280px;
+}
+
+.quote-cell .review-quote {
+  border-top: none;
+  padding: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.quote-cell .review-quote p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .reviews-table th,
+  .reviews-table td {
+    padding: 0.85rem 0.65rem;
+  }
+  .game-thumb {
+    width: 68px;
+    height: 68px;
+  }
+  .game-cell {
+    min-width: 220px;
+  }
 }
 
 /* Footer */
