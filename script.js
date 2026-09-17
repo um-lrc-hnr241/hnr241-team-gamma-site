@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   safeInit(initNavToggle);
   safeInit(initYear);
   safeInit(initDiceTile);
+  safeInit(initReviewsFilter);
 });
 
 function safeInit(fn) {
@@ -136,5 +137,44 @@ function initDiceTile() {
     if (event.key === 'Enter' || event.key === ' ') {
       rollDie();
     }
+  });
+}
+
+// Reviews genre filter toolbar on reviews.html
+function initReviewsFilter() {
+  var filterButtons = document.querySelectorAll('[data-filter]');
+  var cards = document.querySelectorAll('.review-card');
+  var countEl = document.getElementById('reviewFilterCount');
+
+  if (!filterButtons.length || !cards.length) {
+    return;
+  }
+
+  filterButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var filter = btn.getAttribute('data-filter');
+
+      filterButtons.forEach(function (b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+
+      var visibleCount = 0;
+      cards.forEach(function (card) {
+        var genres = (card.getAttribute('data-genre') || '').toLowerCase();
+        if (filter === 'all' || genres.indexOf(filter.toLowerCase()) !== -1) {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (countEl) {
+        countEl.textContent = 'Showing ' + visibleCount + ' of ' + cards.length + ' reviews';
+      }
+    });
   });
 }
