@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   safeInit(initYear);
   safeInit(initDiceTile);
   safeInit(initReviewsFilter);
+  safeInit(initImageFallbacks);
 });
 
 function safeInit(fn) {
@@ -143,10 +144,10 @@ function initDiceTile() {
 // Reviews genre filter toolbar on reviews.html
 function initReviewsFilter() {
   var filterButtons = document.querySelectorAll('[data-filter]');
-  var cards = document.querySelectorAll('.review-card');
+  var items = document.querySelectorAll('.review-row, .review-card');
   var countEl = document.getElementById('reviewFilterCount');
 
-  if (!filterButtons.length || !cards.length) {
+  if (!filterButtons.length || !items.length) {
     return;
   }
 
@@ -162,18 +163,33 @@ function initReviewsFilter() {
       btn.setAttribute('aria-pressed', 'true');
 
       var visibleCount = 0;
-      cards.forEach(function (card) {
-        var genres = (card.getAttribute('data-genre') || '').toLowerCase();
+      items.forEach(function (item) {
+        var genres = (item.getAttribute('data-genre') || '').toLowerCase();
         if (filter === 'all' || genres.indexOf(filter.toLowerCase()) !== -1) {
-          card.style.display = '';
+          item.style.display = '';
           visibleCount++;
         } else {
-          card.style.display = 'none';
+          item.style.display = 'none';
         }
       });
 
       if (countEl) {
-        countEl.textContent = 'Showing ' + visibleCount + ' of ' + cards.length + ' reviews';
+        countEl.textContent = 'Showing ' + visibleCount + ' of ' + items.length + ' reviews';
+      }
+    });
+  });
+}
+
+// Gracefully handle image path fallbacks between /images/ and root folder
+function initImageFallbacks() {
+  var thumbs = document.querySelectorAll('.game-thumb');
+  thumbs.forEach(function (img) {
+    img.addEventListener('error', function () {
+      var rawSrc = img.getAttribute('src');
+      if (rawSrc && rawSrc.indexOf('images/') === 0) {
+        img.src = rawSrc.replace('images/', '');
+      } else if (rawSrc && rawSrc.indexOf('images/') === -1) {
+        img.src = 'images/' + rawSrc;
       }
     });
   });
