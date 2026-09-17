@@ -180,16 +180,19 @@ function initReviewsFilter() {
   });
 }
 
-// Gracefully handle image path fallbacks between /images/ and root folder
+// Gracefully handle image path fallbacks across assets/, images/, and root folder
 function initImageFallbacks() {
   var thumbs = document.querySelectorAll('.game-thumb');
   thumbs.forEach(function (img) {
     img.addEventListener('error', function () {
-      var rawSrc = img.getAttribute('src');
-      if (rawSrc && rawSrc.indexOf('images/') === 0) {
+      var rawSrc = img.getAttribute('src') || '';
+      if (rawSrc.indexOf('assets/') === 0) {
+        img.src = rawSrc.replace('assets/', 'images/');
+      } else if (rawSrc.indexOf('images/') === 0) {
         img.src = rawSrc.replace('images/', '');
-      } else if (rawSrc && rawSrc.indexOf('images/') === -1) {
-        img.src = 'images/' + rawSrc;
+      } else if (!img.dataset.failedOnce) {
+        img.dataset.failedOnce = 'true';
+        img.src = 'assets/' + rawSrc;
       }
     });
   });
