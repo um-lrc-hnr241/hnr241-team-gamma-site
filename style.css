@@ -410,6 +410,68 @@ section.alt {
   margin-bottom: 0.5rem;
 }
 
+/* Story & About Page */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+@media (max-width: 800px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.story-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  border-top: 6px solid var(--orange);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.story-card.pitch-card {
+  border-top-color: var(--purple-light);
+}
+
+.story-card h2 {
+  color: #fff;
+  font-size: 1.45rem;
+  margin-bottom: 1rem;
+}
+
+.story-quote {
+  background: rgba(75, 46, 131, 0.35);
+  border-left: 4px solid var(--orange);
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.story-quote p {
+  margin: 0;
+}
+
+.pitch-list {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+}
+
+.pitch-list li {
+  margin-bottom: 0.85rem;
+  line-height: 1.5;
+}
+
+.pitch-list strong {
+  color: #fff;
+}
+
 /* Game library grid */
 .game-grid {
   display: grid;
