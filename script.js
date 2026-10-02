@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   safeInit(initDiceTile);
   safeInit(initReviewsFilter);
   safeInit(initImageFallbacks);
+  safeInit(initScrollEffects);
 });
 
 function safeInit(fn) {
@@ -195,5 +196,53 @@ function initImageFallbacks() {
         img.src = 'assets/' + rawSrc;
       }
     });
+  });
+}
+
+// Add lightweight scroll progress and reveal effects without hiding content
+// unless the enhancement can be initialized successfully.
+function initScrollEffects() {
+  var progress = document.createElement('div');
+  progress.className = 'scroll-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  var bar = document.createElement('div');
+  bar.className = 'scroll-progress-bar';
+  progress.appendChild(bar);
+  document.body.appendChild(progress);
+
+  var framePending = false;
+  function updateProgress() {
+    framePending = false;
+    var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    var amount = scrollable > 0 ? window.scrollY / scrollable : 0;
+    bar.style.transform = 'scaleX(' + Math.max(0, Math.min(1, amount)) + ')';
+  }
+  function requestProgressUpdate() {
+    if (!framePending) {
+      framePending = true;
+      window.requestAnimationFrame(updateProgress);
+    }
+  }
+  window.addEventListener('scroll', requestProgressUpdate, { passive: true });
+  window.addEventListener('resize', requestProgressUpdate);
+  updateProgress();
+
+  var revealItems = document.querySelectorAll('.event-card, .game-card, .story-card, .callout');
+  if (!('IntersectionObserver' in window)) {
+    return;
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
+
+  revealItems.forEach(function (item) {
+    item.classList.add('scroll-reveal');
+    observer.observe(item);
   });
 }
